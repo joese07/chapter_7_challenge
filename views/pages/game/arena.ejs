@@ -1,0 +1,68 @@
+<div>
+  <h3>
+    Welcome to Room : <br />
+    <%= name_room %>
+  </h3>
+  <div class="d-flex justify-content-evenly">
+    <form method="post" action="/arena">
+    <button
+      type="button"
+      name="gunting"
+ 
+      class="btn btn-primary btn-lg"
+      onclick="buttonGunting()"
+    >
+      Gunting
+    </button>
+    <button
+      type="button"
+      name="kertas"
+  
+      class="btn btn-primary btn-lg"
+      onclick="buttonKertas()"
+    >
+      Kertas
+    </button>
+    <button
+      type="button"
+      name="batu"    
+      class="btn btn-primary btn-lg"
+      onclick="buttonBatu()"
+    >
+      Batu
+    </button>
+  </div>
+  <div class="mt-4">
+    <div class="d-flex justify-content-center">
+      <h3>Your Choose</h3>
+    </div>
+    <div class="d-flex justify-content-center">
+      <input id="choose" style="text-align: center" name="choose" value="" />
+       <button type="submit" class="text-align: center">Send</button>
+    </div>
+  </div>
+ 
+    </form>
+
+  <div class="mt-4">
+    <div class="d-flex justify-content-center">
+      <h3>RESULT</h3>
+    </div>
+    <div class="d-flex justify-content-center">
+      <input />
+    </div>
+  </div>
+</div>
+<script>
+  function buttonGunting() {
+    document.getElementById("choose").value = "GUNTING";
+  }
+
+  function buttonBatu() {
+    document.getElementById("choose").value = "BATU";
+  }
+
+  function buttonKertas() {
+    document.getElementById("choose").value = "KERTAS";
+  }
+</script>
